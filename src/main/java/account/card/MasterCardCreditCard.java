@@ -2,11 +2,10 @@ package account.card;
 
 import account.card.type.CreditCardType;
 
-public class MasterCardCreditCard {
-        private CreditCardType creditCardType;
-        private String number;
-        private String expirationDate;
-        private double balance;
-        private double maxCredit;
-    }
+public class MasterCardCreditCard extends CreditCard {
+
+        public MasterCardCreditCard(CreditCardType creditCardType, String number, String expirationDate, double balance, double maxCredit) {
+                super(creditCardType, number, expirationDate, balance, maxCredit);
+        }
+}
 

@@ -2,10 +2,9 @@ package account.card;
 
 import account.card.type.CreditCardType;
 
-public class AmericanExpressCreditCard {
-    private CreditCardType creditCardType;
-    private String number;
-    private String expirationDate;
-    private double balance;
-    private double maxCredit;
+public class AmericanExpressCreditCard extends CreditCard{
+
+    public AmericanExpressCreditCard(CreditCardType creditCardType, String number, String expirationDate, double balance, double maxCredit) {
+        super(creditCardType, number, expirationDate, balance, maxCredit);
+    }
 }
