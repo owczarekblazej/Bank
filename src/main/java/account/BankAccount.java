@@ -64,7 +64,7 @@ public class BankAccount {
         public BankAccountBuilder addAccountCode(String accountCode){
             this.accountCode = accountCode;
             return this;
-            
+
     }
 
         public BankAccountBuilder addBankName(String bankName){
