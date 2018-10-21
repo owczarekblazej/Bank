@@ -16,4 +16,46 @@ public abstract class CreditCard {
         this.balance = balance;
         this.maxCredit = maxCredit;
     }
+
+    public CreditCardType getCreditCardType() {
+        return creditCardType;
+    }
+
+    public void setCreditCardType(CreditCardType creditCardType) {
+        this.creditCardType = creditCardType;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getExpirationDate() {
+        return expirationDate;
+    }
+
+    public void setExpirationDate(String expirationDate) {
+        this.expirationDate = expirationDate;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public double getMaxCredit() {
+        return maxCredit;
+    }
+
+    public void setMaxCredit(double maxCredit) {
+        this.maxCredit = maxCredit;
+    }
+
+    public abstract void showCreditCardPartners();
 }

@@ -1,11 +1,13 @@
 package user;
 
 import account.BankAccount;
+import account.card.factory.CreditCardFactory;
+import account.card.type.CreditCardType;
 
 import java.util.HashMap;
 
 public class UserRepository {
-    //  tworzymy singleton
+    // tworzymy singleton
     // typ lazy:
     private static UserRepository instance = new UserRepository();
 
@@ -35,6 +37,7 @@ public class UserRepository {
 
     private UserRepository() {
         users = new HashMap<>();
+        CreditCardFactory creditCardFactory = new CreditCardFactory();
 //         tworzenie obiektów po staremu
 
 //        BankAccount bankAccountOne = new BankAccount("111111111111111122222222","1010",
@@ -53,6 +56,8 @@ public class UserRepository {
                 .builder("333333333333333344444444")
                 .addAccountCode("2020")
                 .addBankName("Safety BANK")
+                .addCreditCard(creditCardFactory.createCreditCard(CreditCardType.VISA,
+                        "11111111111223344","01/22",4000))
                 .addAccountName("Andres Account2020")
                 .build();
 
